@@ -1,18 +1,18 @@
-import React from "react";
-import {useHistory, useParams} from "react-router";
 import Button from "@material-ui/core/Button";
 import Chip from "@material-ui/core/Chip";
 import { makeStyles } from "@material-ui/core/styles";
-
+import qs from 'query-string';
+import React from "react";
+import { useHistory, useParams } from "react-router";
+import bankIcon from "../../assets/banks/griffinbank-icon.svg";
+import checkIcon from "../../assets/icon-check.svg";
+import { theme } from "../../theme";
 import PageContainer from "../common/PageContainer";
 import PageToolbar from "../common/PageToolbar";
+import Confetti from "./Confetti";
 import ContributionCard from "./ContributionCard";
 import Field from "./Field";
-import Confetti from "./Confetti";
-import { theme } from "../../theme";
-import bankIcon from "../../assets/banks/gobank-icon.svg";
-import checkIcon from "../../assets/icon-check.svg";
-import qs from 'query-string';
+
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -163,7 +163,7 @@ export default function InvestmentsContributeSuccess({
                 Bank name
               </div>
               <div>
-                Go Bank{" "}
+                Griffin Bank{" "}
                 <img
                   src={bankIcon}
                   alt="bank logo"

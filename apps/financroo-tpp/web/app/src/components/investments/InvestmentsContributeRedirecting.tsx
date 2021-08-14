@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
-
+import { makeStyles } from "@material-ui/core/styles";
+import React, { useEffect } from "react";
 import iconBank from "../../assets/icon-bank2.svg";
+
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -53,7 +53,7 @@ export default function InvestmentsContributeRedirecting({
         <LinearProgress />
       </div>
       <div className={classes.text}>
-        We are redirecting you to Go Bank
+        We are redirecting you to Griffin Bank
         <br />
         <br />
         You will be redirected back here after you <br />

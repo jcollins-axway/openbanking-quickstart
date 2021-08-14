@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { makeStyles, Theme } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 import Checkbox from "@material-ui/core/Checkbox";
 import Alert from "@material-ui/lab/Alert";
-import Button from "@material-ui/core/Button";
-import { makeStyles, Theme } from "@material-ui/core";
+import React, { useState } from "react";
 import CustomDrawer from "../AccountView/Drawers/CustomDrawer";
 import { ClientType, drawerStyles } from "../utils";
 
@@ -96,8 +96,8 @@ export default function RevokeDrawer({
           classes={{ root: classes.alertRoot, icon: classes.alertIcon }}
           color="error"
         >
-          Warning: Warning: Go Bank members will no longer be able to use{" "}
-          <b>{client?.client_name}</b> with all Go Bank accounts
+          Warning: Warning: Griffin Bank members will no longer be able to use{" "}
+          <b>{client?.client_name}</b> with all Griffin Bank accounts
         </Alert>
         <div className={classes.revokeInfo}>
           Are you sure you want to revoke all API access for{" "}

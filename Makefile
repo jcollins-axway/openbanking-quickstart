@@ -3,6 +3,9 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 
 .EXPORT_ALL_VARIABLES: ;
 
+IMAGES := $(shell docker images | grep -v IMAGE | awk '{print $$3}')
+DB_FILES := $(shell find . -name my.db)
+
 OB_APPS=developer-tpp financroo-tpp consent-page consent-self-service-portal consent-admin-portal bank
 ACP_APPS=acp crdb hazelcast configuration
 
@@ -48,6 +51,17 @@ stop:
 .PHONY: clean
 clean:
 	docker-compose down -v
+
+.PHONY: clean-db
+clean-db:
+	sudo rm $${DB_FILES}
+
+.PHONY: clean-images
+clean-images:
+	docker rmi -f $${IMAGES}
+
+.PHONY: reset-dev
+reset-dev: stop clean clean-db clean-images
 
 .PHONY: run-tests
 run-tests:

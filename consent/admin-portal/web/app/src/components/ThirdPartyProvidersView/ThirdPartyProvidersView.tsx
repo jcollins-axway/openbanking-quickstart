@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
 import { Container, makeStyles, Theme, Typography } from "@material-ui/core";
-
-import PageToolbar from "../PageToolbar";
-import Progress from "../Progress";
+import React, { useEffect, useState } from "react";
 import { api } from "../../api/api";
-import noAccountEmptyState from "../no-accounts-empty-state.svg";
 import iconShield from "../../assets/icon-shield.svg";
 import ClientsList from "../ClientsList";
-import Subheader from "../Subheader";
+import noAccountEmptyState from "../no-accounts-empty-state.svg";
+import PageToolbar from "../PageToolbar";
+import Progress from "../Progress";
 import SearchInput from "../SearchInput";
+import Subheader from "../Subheader";
 import { ClientType } from "../utils";
+
 
 const useStyles = makeStyles((theme: Theme) => ({
   subtitle: {
@@ -110,7 +110,7 @@ export default function ThirdPartyProvidersView({
                   icon={iconShield}
                 >
                   <div className={classes.subtitle}>
-                    Go Bank has granted API access to the following third-party
+                    Griffin Bank has granted API access to the following third-party
                     applications. Revoke access to those you no longer trust.
                   </div>
                 </Subheader>

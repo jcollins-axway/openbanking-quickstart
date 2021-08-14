@@ -1,13 +1,13 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Chip from "@material-ui/core/Chip";
+import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
-
+import React from "react";
+import { theme } from "../../theme";
+import { banks } from "../banks";
 import ContributionCard from "./ContributionCard";
 import Field from "./Field";
-import { theme } from "../../theme";
-import { BalanceType, AccountType } from "./InvestmentsContribute";
-import { banks } from "../banks";
+import { AccountType, BalanceType } from "./InvestmentsContribute";
+
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -153,7 +153,7 @@ export default function InvestmentsContributeSummary({
         </div>
       </Field>
       <Field style={{ ...theme.custom.caption, marginBottom: 0 }}>
-        You will be securely transferred to <strong>Go Bank</strong> to
+        You will be securely transferred to <strong>Griffin Bank</strong> to
         authorize the payment
       </Field>
     </ContributionCard>

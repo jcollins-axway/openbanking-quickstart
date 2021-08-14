@@ -1,12 +1,12 @@
-import React from "react";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
-import { makeStyles } from "@material-ui/core/styles";
+import { Button } from "@material-ui/core";
 import Dialog from "@material-ui/core/Dialog";
+import IconButton from "@material-ui/core/IconButton";
+import { makeStyles } from "@material-ui/core/styles";
+import CloseIcon from "@material-ui/icons/Close";
+import React from "react";
+import { useHistory } from "react-router";
 import financrooLogo from "../assets/financroo-logo.svg";
 import icon from "../assets/icon-check.svg";
-import { Button } from "@material-ui/core";
-import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
   dialog: {
@@ -81,7 +81,7 @@ export default function AcccountsAddedDialog({ open, setOpen }) {
       <div className={classes.dialogContent}>
         <img src={icon} alt="icon" />
         <div>
-          Your <strong>Go Bank</strong> account(s) has been successfully
+          Your <strong>Griffin Bank</strong> account(s) has been successfully
           connected to Financroo
         </div>
         <div>

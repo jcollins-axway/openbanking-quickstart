@@ -1,12 +1,12 @@
-import gobank from "../assets/banks/gobank-logo.svg";
+import apexfinancialIcon from "../assets/banks/apexfinancial-icon.svg";
 import apexfinancial from "../assets/banks/apexfinancial-logo.svg";
+import chaseIcon from "../assets/banks/chase-icon.svg";
 import chase from "../assets/banks/chase-logo.svg";
 import deutcshebank from "../assets/banks/deutcshebank-logo.svg";
+import griffinBankIcon from "../assets/banks/griffinbank-icon.svg";
+import griffinBank from "../assets/banks/griffinbank-logo.svg";
 import hsbc from "../assets/banks/hsbc-logo.svg";
 import santander from "../assets/banks/santander-logo.svg";
-import gobankIcon from "../assets/banks/gobank-icon.svg";
-import apexfinancialIcon from "../assets/banks/apexfinancial-icon.svg";
-import chaseIcon from "../assets/banks/chase-icon.svg";
 
 export type Bank = {
   value: string;
@@ -18,11 +18,11 @@ export type Bank = {
 
 export const banks: Bank[] = [
   {
-    value: "gobank",
+    value: "griffinbank",
     disabled: false,
-    name: "GO Bank",
-    logo: gobank,
-    icon: gobankIcon,
+    name: "Griffin Bank",
+    logo: griffinBank,
+    icon: griffinBankIcon,
   },
   {
     value: "apexfinancial",
