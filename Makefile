@@ -3,7 +3,7 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 
 .EXPORT_ALL_VARIABLES: ;
 
-IMAGES := $(shell docker images | grep -v IMAGE | awk '{print $$3}')
+IMAGES := $(shell docker images | grep -v IMAGE | grep latest | awk '{print $$3}')
 DB_FILES := $(shell find . -name my.db)
 
 OB_APPS=developer-tpp financroo-tpp consent-page consent-self-service-portal consent-admin-portal bank
